@@ -1083,7 +1083,7 @@ function getNodeMatch<T extends RouteLike>(
         }
         if (suffix) {
           if (isBeyondPath) continue
-          const end = parts.slice(index).join('/').slice(-suffix.length)
+          const end = path.slice(-suffix.length)
           const casePart = segment.caseSensitive ? end : end.toLowerCase()
           if (casePart !== suffix) continue
         }
